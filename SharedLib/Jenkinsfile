@@ -1,4 +1,4 @@
- @Library('common') _
+ @Library('Common') _
 
 pipeline {
 	agent any
