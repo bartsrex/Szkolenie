@@ -1,9 +1,10 @@
- @Library('Common') _
+@Library('Common') _
 
 pipeline {
-	agent any
-	stages {
-		stage ('Info') {
+    agent any
+
+    stages {
+        stage ('Info') {
 		    steps {
 		        script {
 		    	    common.info("Its just an info")
@@ -17,5 +18,13 @@ pipeline {
 		        }
 		    }
 		}
-	}
+		
+		stage ('Error') {
+		    steps {
+		        script {
+		    	    common.error("Alert!")
+		        }
+		    }
+		}
+    }
 }
